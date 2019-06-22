@@ -1,0 +1,103 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<nav class="navbar navbar-expand-sm navbar-dark  bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fas fa-home"></i> Sri Minakshi Devsthanam</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" style="cursor: pointer" routerLink="/home" routerLinkActive="active"> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="cursor: pointer" routerLink="/howitworks" routerLinkActive="active">Pooja
+            Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="cursor: pointer" routerLink="/estimate-wizard" routerLinkActive="active">Events
+            Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="cursor: pointer" routerLink="/faq" routerLinkActive="active">Vedic School</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="cursor: pointer" routerLink="/faq" routerLinkActive="active">Cultural Classes</a>
+        </li>
+
+        <li class="nav-item dropdown mr-3">
+          <a style="cursor: pointer" class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdown-outreach"
+            aria-haspopup="true" aria-expanded="false">
+            Community Outreach
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdown-outreach">
+            <a class="dropdown-item" style="cursor: pointer" routerLink="/my-requests"
+              *ngIf="roleList.length >0 && roleList.indexOf(env.ROLE_CUSTOMER) != -1">
+              <i class="fa fa-car" aria-hidden="true"></i> Plan your visit</a>
+            <a style="cursor: pointer" class="dropdown-item" routerLink="/my-profile">
+              <i class="fa fa-user-circle"></i> Read & Learn
+            </a>
+            <a style="cursor: pointer" class="dropdown-item" routerLink="/my-profile">
+              <i class="fa fa-user-circle"></i> Feedback
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown mr-3">
+          <a style="cursor: pointer" class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdown-about"
+            aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdown-about">
+            <a class="dropdown-item" style="cursor: pointer" routerLink="/my-requests"
+              *ngIf="roleList.length >0 && roleList.indexOf(env.ROLE_CUSTOMER) != -1">
+              <i class="fa fa-car" aria-hidden="true"></i> Plan your visit</a>
+            <a style="cursor: pointer" class="dropdown-item" routerLink="/my-profile">
+              <i class="fa fa-user-circle"></i> Temple Board
+            </a>
+            <a style="cursor: pointer" class="dropdown-item" routerLink="/my-profile">
+              <i class="fa fa-user-circle"></i> Directions
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="roleList.length >0 && roleList.indexOf(env.ROLE_MANAGER) != -1">
+          <a class="nav-link" style="cursor: pointer" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li class="nav-item"
+          *ngIf="roleList.length >0 && (roleList.indexOf(env.ROLE_MANAGER) != -1 || roleList.indexOf(env.ROLE_EMPLOYEE) != -1 )">
+          <a class="nav-link" style="cursor: pointer" routerLink="/worklist" routerLinkActive="active">Worklist</a>
+        </li>
+        <li class="nav-item dropdown mr-3" *ngIf="loggedIn">
+          <a style="cursor: pointer" class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdown-manage"
+            aria-haspopup="true" aria-expanded="false">
+            Manage
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdown-manage">
+            <a class="dropdown-item" style="cursor: pointer" routerLink="/my-requests"
+              *ngIf="roleList.length >0 && roleList.indexOf(env.ROLE_CUSTOMER) != -1">
+              <i class="fa fa-car" aria-hidden="true"></i> My Service Requests</a>
+            <a style="cursor: pointer" class="dropdown-item" routerLink="/my-profile">
+              <i class="fa fa-user-circle"></i> Profile
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="cursor: pointer" routerLink="/signup" *ngIf="!loggedIn"
+            routerLinkActive="active">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="cursor: pointer" routerLink="/login" *ngIf="!loggedIn"
+            routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="loggedIn">
+          <a style="cursor: pointer" class="nav-link" (click)="onLogout()">
+            <i class="fa fa-user-times"></i> Logout {{username}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
