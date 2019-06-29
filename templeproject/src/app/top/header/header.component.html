@@ -23,22 +23,21 @@
           <a class="nav-link" style="cursor: pointer" routerLink="/faq" routerLinkActive="active">Vedic School</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="cursor: pointer" routerLink="/faq" routerLinkActive="active">Cultural Classes</a>
+          <a class="nav-link" style="cursor: pointer" routerLink="/cultural" routerLinkActive="active">Cultural Classes</a>
         </li>
 
         <li class="nav-item dropdown mr-3">
           <a style="cursor: pointer" class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdown-outreach"
             aria-haspopup="true" aria-expanded="false">
-            Community Outreach
+            Education and Outreach
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdown-outreach">
-            <a class="dropdown-item" style="cursor: pointer" routerLink="/my-requests"
-              *ngIf="roleList.length >0 && roleList.indexOf(env.ROLE_CUSTOMER) != -1">
+            <a class="dropdown-item" style="cursor: pointer" routerLink="/plannedVisit">
               <i class="fa fa-car" aria-hidden="true"></i> Plan your visit</a>
-            <a style="cursor: pointer" class="dropdown-item" routerLink="/my-profile">
+            <a style="cursor: pointer" class="dropdown-item" routerLink="/readAndLearn">
               <i class="fa fa-user-circle"></i> Read & Learn
             </a>
-            <a style="cursor: pointer" class="dropdown-item" routerLink="/my-profile">
+            <a style="cursor: pointer" class="dropdown-item" routerLink="/feddback">
               <i class="fa fa-user-circle"></i> Feedback
             </a>
           </div>
