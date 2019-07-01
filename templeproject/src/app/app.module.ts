@@ -18,6 +18,8 @@ import { OutreachComponent } from './main/outreach/outreach.component';
 import { HomeComponent } from './main/home/home.component';
 import { EventscalendarComponent } from './main/eventscalendar/eventscalendar.component';
 import { Environment } from './shared/environment.service';
+import { DaycalendarComponent } from './daycalendar/daycalendar.component';
+import { FestivalcalendarComponent } from './festivalcalendar/festivalcalendar.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { Environment } from './shared/environment.service';
     DirectionsComponent,
     OutreachComponent,
     HomeComponent,
-    EventscalendarComponent
+    EventscalendarComponent,
+    DaycalendarComponent,
+    FestivalcalendarComponent
   ],
   imports: [
     BrowserModule,
