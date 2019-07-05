@@ -12,7 +12,6 @@ import { ProjectsComponent } from './main/projects/projects.component';
 import { ServicesComponent } from './main/services/services.component';
 import { VedicschoolComponent } from './main/vedicschool/vedicschool.component';
 import { CulturalclassesComponent } from './main/culturalclasses/culturalclasses.component';
-import { TempleboardComponent } from './main/templeboard/templeboard.component';
 import { DirectionsComponent } from './main/directions/directions.component';
 import { OutreachComponent } from './main/outreach/outreach.component';
 import { HomeComponent } from './main/home/home.component';
@@ -20,6 +19,7 @@ import { EventscalendarComponent } from './main/eventscalendar/eventscalendar.co
 import { Environment } from './shared/environment.service';
 import { DaycalendarComponent } from './daycalendar/daycalendar.component';
 import { FestivalcalendarComponent } from './festivalcalendar/festivalcalendar.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +33,13 @@ import { FestivalcalendarComponent } from './festivalcalendar/festivalcalendar.c
     ServicesComponent,
     VedicschoolComponent,
     CulturalclassesComponent,
-    TempleboardComponent,
     DirectionsComponent,
     OutreachComponent,
     HomeComponent,
     EventscalendarComponent,
     DaycalendarComponent,
-    FestivalcalendarComponent
+    FestivalcalendarComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

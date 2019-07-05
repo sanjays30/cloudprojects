@@ -5,9 +5,9 @@ import { ServicesComponent } from './main/services/services.component';
 import { EventscalendarComponent } from './main/eventscalendar/eventscalendar.component';
 import { VedicschoolComponent } from './main/vedicschool/vedicschool.component';
 import { CulturalclassesComponent } from './main/culturalclasses/culturalclasses.component';
-import { TempleboardComponent } from './main/templeboard/templeboard.component';
 import { DirectionsComponent } from './main/directions/directions.component';
 import { OutreachComponent } from './main/outreach/outreach.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes=[
   {path:'',  redirectTo: 'home',pathMatch:'full' },
@@ -17,7 +17,7 @@ const appRoutes: Routes=[
   {path: 'eventscalendar', component: EventscalendarComponent},
   {path: 'vedicschool', component: VedicschoolComponent},
   {path: 'cultural', component: CulturalclassesComponent},
-  {path: 'templeboard', component: TempleboardComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'directions', component: DirectionsComponent}
 ];
 @NgModule({
