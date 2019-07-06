@@ -20,6 +20,9 @@ import { Environment } from './shared/environment.service';
 import { DaycalendarComponent } from './daycalendar/daycalendar.component';
 import { FestivalcalendarComponent } from './festivalcalendar/festivalcalendar.component';
 import { AboutComponent } from './about/about.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -39,11 +42,14 @@ import { AboutComponent } from './about/about.component';
     EventscalendarComponent,
     DaycalendarComponent,
     FestivalcalendarComponent,
-    AboutComponent
+    AboutComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [Environment],
   bootstrap: [AppComponent]

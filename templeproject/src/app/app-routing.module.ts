@@ -8,6 +8,8 @@ import { CulturalclassesComponent } from './main/culturalclasses/culturalclasses
 import { DirectionsComponent } from './main/directions/directions.component';
 import { OutreachComponent } from './main/outreach/outreach.component';
 import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 const appRoutes: Routes=[
   {path:'',  redirectTo: 'home',pathMatch:'full' },
@@ -18,6 +20,9 @@ const appRoutes: Routes=[
   {path: 'vedicschool', component: VedicschoolComponent},
   {path: 'cultural', component: CulturalclassesComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'signup', component: SignupComponent},
+
   {path: 'directions', component: DirectionsComponent}
 ];
 @NgModule({
